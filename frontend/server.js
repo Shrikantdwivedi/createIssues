@@ -1,4 +1,6 @@
-import express from 'express';
+const express =require('express');
+const http =require('http');
+const path=require('path');
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
@@ -13,6 +15,8 @@ app.get('/',(req,res)=>res.send("Hello World!"));
 app.listen(4000,()=>console.log('Express Server Running on port 4000'));*/
 
 const app=express();
+app.use(express.static(__dirname+'/dist/frontend'));
+app.get('/*',(req,res)=>res.sendFile(path.join(__dirname)));
 const router=express.Router();
 
 

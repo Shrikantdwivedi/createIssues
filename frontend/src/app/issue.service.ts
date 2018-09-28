@@ -8,7 +8,7 @@ import{HttpClient} from '@angular/common/http';
 export class IssueService {
 
 // adding the url of the localhost
-uri="https://bcreateissue.herokuapp.com/";
+uri="https://bcreateissue.herokuapp.com";
 
 
   //injection httpclient in the constructor
